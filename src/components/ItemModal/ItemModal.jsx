@@ -1,4 +1,5 @@
 import React from "react";
+import "./ItemModal.css";
 
 function ItemModal({ item, onClose }) {
   return (
