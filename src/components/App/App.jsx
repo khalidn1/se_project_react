@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import './App.css';
-import { fetchWeather } from "../../utils/weatherApi";
+import "./App.css";
+import { fetchWeather } from "../../utils/weatherApi.js";
 import defaultClothingItems from "../../utils/defaultClothingItems";
 
 function App() {
@@ -9,9 +9,7 @@ function App() {
   const [clothingItems, setClothingItems] = useState([]);
 
   useEffect(() => {
-    fetchWeather()
-      .then(setWeather)
-      .catch(console.error);
+    fetchWeather().then(setWeather).catch(console.error);
 
     setClothingItems(defaultClothingItems);
   }, []);
@@ -20,9 +18,7 @@ function App() {
     <>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount(count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={() => setCount(count + 1)}>count is {count}</button>
       </div>
       {weather && (
         <div>
@@ -32,7 +28,7 @@ function App() {
         </div>
       )}
       <ul>
-        {clothingItems.map(item => (
+        {clothingItems.map((item) => (
           <li key={item._id}>{item.name}</li>
         ))}
       </ul>
