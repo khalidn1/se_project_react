@@ -1,28 +1,29 @@
-import React from "react";
 import "./Header.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
+import avatar from "../../assets/avatar.svg";
 
-const currentDate = new Date().toLocaleString("default", {
-  month: "long",
-  day: "numeric",
-});
+function Header({ handleAddClick, weatherData }) {
+  const currentDate = new Date().toLocaleString("default", {
+    month: "long",
+    day: "numeric",
+  });
 
-function Header({ location, onAddClothes }) {
   return (
     <header className="header">
-      <img src={logo} alt="Logo" className="header__logo" />
-      <span className="header__date">{currentDate}</span>
-      <span className="header__location">{location}</span>
-      <button className="header__add-btn" onClick={onAddClothes}>
-        Add Clothes
+      <img className="header__logo" src={logo} />
+      <p className="header__date-and-location">
+        {currentDate}, {weatherData.city}
+      </p>
+      <button
+        onClick={handleAddClick}
+        type="button"
+        className="header__add-clothes-btn"
+      >
+        Add clothes
       </button>
-      <div className="header__user">
-        <img
-          src="/assets/avatar.png"
-          alt="User Avatar"
-          className="header__avatar"
-        />
-        <span className="header__username">John Doe</span>
+      <div className="header__user-container">
+        <p className="header__username">Terrence Tegegne</p>
+        <img src={avatar} alt="Terrence Tegegne" className="header__avatar" />
       </div>
     </header>
   );

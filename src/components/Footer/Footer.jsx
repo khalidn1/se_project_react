@@ -1,10 +1,10 @@
-import React from "react";
 import "./Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <span>&copy; {new Date().getFullYear()} Your App Name</span>
+      <p className="footer__text">Developed by Name Surname</p>
+      <p className="footer__year">2022</p>
     </footer>
   );
 }

@@ -1,39 +1,99 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
 import "./App.css";
-import { fetchWeather } from "../../utils/weatherApi.js";
-import defaultClothingItems from "../../utils/defaultClothingItems";
+import { coordinates, APIkey } from "../../utils/constants";
+import Header from "../Header/Header";
+import Main from "../Main/Main";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import ItemModal from "../ItemModal/ItemModal";
+import { getWeather, filterWeatherData } from "../../utils/weatherAPI";
 
 function App() {
-  const [weather, setWeather] = useState(null);
-  const [count, setCount] = useState(0);
-  const [clothingItems, setClothingItems] = useState([]);
+  const [weatherData, setWeatherData] = useState({
+    type: "",
+    temp: { F: 999, C: 999 },
+    city: "",
+  });
+  const [activeModal, setActiveModal] = useState("");
+  const [selectedCard, setSelectedCard] = useState({});
+
+  const handleCardClick = (card) => {
+    setActiveModal("preview");
+    setSelectedCard(card);
+  };
+
+  const handleAddClick = () => {
+    setActiveModal("add-garment");
+  };
+
+  const closeActiveModal = () => {
+    setActiveModal("");
+  };
 
   useEffect(() => {
-    fetchWeather().then(setWeather).catch(console.error);
-
-    setClothingItems(defaultClothingItems);
+    getWeather(coordinates, APIkey)
+      .then((data) => {
+        const filteredData = filterWeatherData(data);
+        setWeatherData(filteredData);
+      })
+      .catch(console.error);
   }, []);
 
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount(count + 1)}>count is {count}</button>
+    <div className="page">
+      <div className="page_content">
+        <Header handleAddClick={handleAddClick} weatherData={weatherData} />
+        <Main weatherData={weatherData} handleCardClick={handleCardClick} />
       </div>
-      {weather && (
-        <div>
-          <p>City: {weather.city}</p>
-          <p>Temperature: {weather.temperature}°F</p>
-          <p>Weather Type: {weather.weatherType}</p>
-        </div>
-      )}
-      <ul>
-        {clothingItems.map((item) => (
-          <li key={item._id}>{item.name}</li>
-        ))}
-      </ul>
-    </>
+      <ModalWithForm
+        buttonText="Add garment"
+        title="New garment"
+        activeModal={activeModal}
+        onClose={closeActiveModal}
+      >
+        <label htmlFor="name" className="modal__label">
+          Name{" "}
+          <input
+            type="text"
+            className="modal__input"
+            id="name"
+            placeholder="name"
+          />
+        </label>
+        <label htmlFor="imageUrl" className="modal__label">
+          Image{" "}
+          <input
+            type="url"
+            className="modal__input"
+            id="imageUrl"
+            placeholder="image URL"
+          />
+        </label>
+        <fieldset className="modal__radio-buttons">
+          <legend className="modal__legend">Select the weather type:</legend>
+          <label htmlFor="hot" className="modal__label modal__label_type_radio">
+            <input id="cold" type="radio" className="modal__radio-input" /> Hot
+          </label>
+          <label
+            htmlFor="warm"
+            className="modal__label modal__label_type_radio"
+          >
+            <input id="cold" type="radio" className="modal__radio-input" /> Warm
+          </label>
+          <label
+            htmlFor="cold"
+            className="modal__label modal__label_type_radio"
+          >
+            <input id="cold" type="radio" className="modal__radio-input" /> Cold
+          </label>
+        </fieldset>
+      </ModalWithForm>
+      <ItemModal
+        activeModal={activeModal}
+        card={selectedCard}
+        onClose={closeActiveModal}
+      />
+    </div>
   );
 }
-
 export default App;

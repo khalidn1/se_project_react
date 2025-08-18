@@ -1,16 +1,20 @@
-import React from "react";
 import "./ItemModal.css";
 
-function ItemModal({ item, onClose }) {
+function itemModal({ activeModal, onClose, card }) {
   return (
-    <div className="modal modal_type_item">
-      <button className="modal__close" onClick={onClose}>
-        ×
-      </button>
-      <img src={item.image} alt={item.title} className="modal__image" />
-      <h2 className="modal__title">{item.title}</h2>
+    <div className={`modal ${activeModal === "preview" && "modal_opened"}`}>
+      <div className="modal__content modal_content_type_image">
+        <button onClick={onClose} type="button" className="modal__close">
+          CLOSE
+        </button>
+        <img src={card.link} alt="" className="modal__image" />
+        <div className="modal__footer">
+          <h2 className="modal__caption">{card.name}</h2>
+          <p className="modal__weather">Weather: {card.weather}</p>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default ItemModal;
+export default itemModal;

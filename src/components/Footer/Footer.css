@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer__text {
+  margin: 0;
+}
+
+.footer__year {
+  margin: 0;
+  font-weight: 500;
+}
