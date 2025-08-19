@@ -1,78 +1,78 @@
 .modal {
   position: fixed;
-  inset: 0;
-  z-index: 1000;
-  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
 }
 
 .modal_opened {
-  display: block;
-}
-
-.modal::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--modal-overlay);
-  backdrop-filter: blur(2px);
+  visibility: visible;
 }
 
 .modal__content {
   position: relative;
-  z-index: 1;
-  background: var(--modal-bg);
-  border-radius: var(--modal-radius);
-  box-shadow: var(--modal-shadow);
+  background: #fff;
+  border-radius: 16px;
   overflow: hidden;
-  margin: auto;
+  max-width: 498px;
+  width: 100%;
 }
 
 .modal_content_type_image {
-  max-width: 640px;
-  max-height: 86vh;
+  max-width: 498px;
   display: flex;
   flex-direction: column;
 }
 
 .modal__close {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 12px;
-  background: rgba(255, 255, 255, 0.88);
+  background: transparent;
   border: none;
-  border-radius: 9999px;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 6px 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  font-size: 16px;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
+
 .modal__close:hover {
-  background: #fff;
+  opacity: 0.8;
 }
 
 .modal__image {
   width: 100%;
   height: auto;
-  max-height: 62vh;
-  object-fit: contain;
-  background: #f7f7f7;
+  max-height: 498px;
+  object-fit: cover;
+  display: block;
 }
 
 .modal__footer {
-  padding: 16px 18px 18px;
-  background: var(--modal-bg);
+  padding: 20px;
+  background: #fff;
 }
 
 .modal__caption {
-  font-size: 1.06rem;
-  font-weight: 600;
-  margin: 0 0 6px;
-  color: var(--modal-text);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #000;
 }
 
 .modal__weather {
-  font-size: 0.94rem;
-  color: var(--modal-muted);
+  font-size: 16px;
+  color: #7e7e7e;
   margin: 0;
 }

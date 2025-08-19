@@ -4,6 +4,8 @@
   height: 80px;
   border-radius: 12px;
   overflow: hidden;
+  background: linear-gradient(135deg, #00A3FF 0%, #0077CC 100%);
+  color: white;
 }
 
 .weather-card__temp {
@@ -13,6 +15,10 @@
   position: absolute;
   top: 20px;
   left: 16px;
+  color: white;
+  font-weight: 700;
+  font-family: 'Cabinet Grotesk', Arial, sans-serif;
+  z-index: 2;
 }
 
 .weather-card__image {

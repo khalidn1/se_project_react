@@ -23,6 +23,16 @@
   position: absolute;
   top: 20px;
   right: 28px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__content {
