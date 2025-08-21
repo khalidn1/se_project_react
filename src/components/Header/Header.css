@@ -16,6 +16,19 @@
 
 .header__add-clothes-btn {
   margin: 0 20px 0 auto;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-family: 'Cabinet Grotesk', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.header__add-clothes-btn:hover {
+  opacity: 0.7;
 }
 
 .header__user-container {
