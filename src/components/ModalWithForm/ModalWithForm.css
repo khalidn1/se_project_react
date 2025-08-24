@@ -144,3 +144,31 @@
 .modal__submit:hover {
   background-color: #333;
 }
+
+.modal__submit_disabled {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.modal__submit_disabled:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0.6;
+}
+
+.modal__input_type_error {
+  border: 1px solid #FF0000;
+}
+
+.modal__error {
+  display: block;
+  color: #FF0000;
+  font-size: 12px;
+  margin-top: 5px;
+  min-height: 16px;
+}
+
+.modal__error_type_radio {
+  margin-bottom: 10px;
+  text-align: center;
+}

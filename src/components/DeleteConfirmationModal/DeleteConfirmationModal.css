@@ -1,0 +1,69 @@
+.modal__content_type_confirmation {
+  max-width: 440px;
+  padding: 32px;
+  text-align: center;
+}
+
+.modal__title_type_confirmation {
+  font-family: 'Cabinet Grotesk', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  margin: 0 0 16px 0;
+}
+
+.modal__text {
+  font-family: 'Cabinet Grotesk', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 0 32px 0;
+}
+
+.modal__buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.modal__confirm-btn {
+  font-family: 'Cabinet Grotesk', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  background: #FC4C02;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.modal__confirm-btn:hover {
+  opacity: 0.8;
+}
+
+.modal__cancel-btn {
+  font-family: 'Cabinet Grotesk', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.modal__cancel-btn:hover {
+  opacity: 0.6;
+}
