@@ -40,24 +40,6 @@ The idea of the application is pretty simple - we make a call to an API, which t
 - Loading states and error handling
 
 
-## Project Structure
-
-```
-src/
-├── components/          # React components
-│   ├── App/            # Main app component
-│   ├── Header/         # Navigation header
-│   ├── Main/           # Home page content
-│   ├── Profile/        # Profile page
-│   ├── ToggleSwitch/   # Temperature toggle
-│   ├── AddItemModal/   # Add item form
-│   └── ...
-├── contexts/           # React contexts
-├── hooks/              # Custom hooks
-├── utils/              # Utility functions
-└── assets/             # Images and icons
-```
-
 ## Links
 
 Figma Design
