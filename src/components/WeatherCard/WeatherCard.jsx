@@ -5,7 +5,7 @@ import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnit
 
 export default function WeatherCard({ weatherData }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
-  const temperature = weatherData.temp?.[currentTemperatureUnit] || weatherData.temperature;
+  const temperature = weatherData.temp?.[currentTemperatureUnit] || 999;
   const condition = weatherData.condition || "sunny";
   const isDay = weatherData.isDay !== undefined ? weatherData.isDay : true;
   

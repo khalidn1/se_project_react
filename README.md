@@ -38,8 +38,3 @@ The idea of the application is pretty simple - we make a call to an API, which t
 - JSON Server for backend simulation
 - Full CRUD operations (Create, Read, Delete)
 - Loading states and error handling
-
-
-## Links
-
-Figma Design

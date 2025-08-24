@@ -1,6 +1,6 @@
 import React from "react";
 import "./ClothesSection.css";
-import ItemCard from "../itemCard/ItemCard";
+import ItemCard from "../ItemCard/ItemCard";
 
 function ClothesSection({ clothingItems, handleCardClick, handleAddClick }) {
   return (

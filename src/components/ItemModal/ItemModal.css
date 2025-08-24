@@ -24,7 +24,7 @@
   width: 100%;
 }
 
-.modal_content_type_image {
+.modal__content_type_image {
   max-width: 498px;
   display: flex;
   flex-direction: column;
