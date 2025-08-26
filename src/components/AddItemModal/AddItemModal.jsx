@@ -33,7 +33,7 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal, isLoading }) => {
   const isValidUrl = (url) => {
     try {
       new URL(url);
-      return url.match(/\.(jpeg|jpg|gif|png|webp)$/i) !== null;
+      return true;
     } catch {
       return false;
     }
