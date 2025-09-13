@@ -168,3 +168,25 @@
   margin-bottom: 10px;
   text-align: center;
 }
+
+.modal__auth-link {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #000;
+}
+
+.modal__auth-button {
+  background: none;
+  border: none;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.modal__auth-button:hover {
+  opacity: 0.6;
+}

@@ -9,6 +9,17 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar__avatar_placeholder {
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .sidebar__username {
@@ -19,6 +30,23 @@
   line-height: 24px;
   color: rgba(0, 0, 0, 0.5);
   margin: 0;
+}
+
+.sidebar__edit-btn {
+  background: transparent;
+  border: none;
+  font-family: 'Cabinet Grotesk', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.sidebar__edit-btn:hover {
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 768px) {
