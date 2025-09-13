@@ -18,7 +18,7 @@ import { getWeather, filterWeatherData } from "../../utils/weatherAPI";
 import { getItems, addItem, deleteItem, addCardLike, removeCardLike } from "../../utils/api";
 import { register, signin, checkToken, updateProfile } from "../../utils/auth";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
-import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -286,14 +286,14 @@ function App() {
             />
             <LoginModal
               isOpen={activeModal === "login"}
-              onSignIn={handleLogin}
+              onLogin={handleLogin}
               onCloseModal={closeActiveModal}
               isLoading={isLoading}
               onSignUpClick={handleRegisterClick}
             />
             <RegisterModal
               isOpen={activeModal === "register"}
-              onSignUp={handleRegister}
+              onRegister={handleRegister}
               onCloseModal={closeActiveModal}
               isLoading={isLoading}
               onSignInClick={handleLoginClick}
