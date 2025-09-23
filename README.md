@@ -4,7 +4,7 @@ A React-based weather app that helps users choose appropriate clothing based on 
 
 ## Backend Repository
 
-The backend API for this project can be found at: [WTWR Backend Repository](https://github.com/dondada/se_project_express)
+The backend API for this project can be found at: [WTWR Backend Repository](https://github.com/khalidn1/se_project_react)
 
 ## About the project
 
