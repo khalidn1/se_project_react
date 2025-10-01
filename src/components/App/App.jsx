@@ -230,7 +230,7 @@ function App() {
       <CurrentTemperatureUnitContext.Provider
         value={{ currentTemperatureUnit, handleToggleSwitchChange }}
       >
-        <CurrentUserContext.Provider value={{ currentUser, setCurrentUser }}>
+        <CurrentUserContext.Provider value={currentUser}>
           <BrowserRouter>
             <div className="page_content">
               <Header 

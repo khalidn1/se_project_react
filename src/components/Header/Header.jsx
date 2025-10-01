@@ -19,7 +19,7 @@ function Header({
     day: "numeric",
   });
 
-  const { currentUser } = useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
 
   const getInitials = (name) => {
     if (!name) return "";

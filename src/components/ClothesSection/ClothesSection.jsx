@@ -10,7 +10,7 @@ function ClothesSection({
   onCardLike,
   isLoggedIn 
 }) {
-  const { currentUser } = useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
 
   const userItems = clothingItems.filter(item => 
     item.owner === currentUser?._id

@@ -4,7 +4,7 @@ import avatar from "../../assets/avatar.svg";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 function SideBar({ onEditProfile }) {
-  const { currentUser } = useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
 
   const getInitials = (name) => {
     if (!name) return "";

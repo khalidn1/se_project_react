@@ -3,7 +3,7 @@ import "./ItemCard.css";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 function ItemCard({ item, onCardClick, onCardLike, isLoggedIn }) {
-  const { currentUser } = useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
   
   const handleCardClick = () => {
     onCardClick(item);
